@@ -59,8 +59,9 @@ func TestGetById_ReturnsExistingFeature(t *testing.T) {
 	// given
 	repo := mocks.NewRepository(t) // creating a new mock instance of Repository
 	id := models.ID(1)
-	repo.EXPECT().Get(id).Return(&models.Feature{}, nil) // specify expectations, expectations are automatically asserted
-	                                                    // at the end of each test
+	repo.EXPECT().Get(id).Return(&models.Feature{}, nil) // specify expectations,
+	                                                     // expectations are automatically asserted
+	                                                     // at the end of each test
 
 	svc := ServiceImpl{Repo: repo}
 
